@@ -1,0 +1,24 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-professions container">
+    <h2 class="main-h2 text-center"><%= name %></h2>
+    <section class="section section-professions">
+        <div class="row">
+            <% data.forEach(item => { %>
+            
+            <div class="col-md-4">
+                <figure class="figure figure-profession">
+                    <a href="/professions/<%= item.id %>" class="">
+                        <img src="/media/Health.jpeg" alt="" class="img-fluid">
+                    <figcaption class="figcap figcap-profession">
+                        <%= item.short_name %>
+                    </figcaption>
+                </a>
+                </figure>
+            </div>
+            <% }) %>
+        </div>
+    </section>
+</main>
+
+<%- include('../partials/footer'); %>
